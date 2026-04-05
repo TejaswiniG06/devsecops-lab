@@ -90,8 +90,4 @@ jobs:
           image-ref: myapp:${{ github.sha }}
           format: table
           severity: HIGH,CRITICAL
-<<<<<<< HEAD
           exit-code: '0'
-=======
-          exit-code: '0'
->>>>>>> 2579c9f325a77c8fbed55c7806f6809eafc7212b
