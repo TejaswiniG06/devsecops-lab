@@ -8,7 +8,7 @@ def search():
     query = request.args.get('q')
     # Intentionally vulnerable (for SAST/DAST to catch)
     conn = sqlite3.connect('db.sqlite3')
-    result = conn.execute(f"SELECT * FROM users WHERE name = '{query}'")
+    result = conn.execute("SELECT * FROM users WHERE name = ?", (query,))
     return str(result.fetchall())
 
 if __name__ == '__main__':
